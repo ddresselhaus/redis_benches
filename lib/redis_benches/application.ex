@@ -8,6 +8,7 @@ defmodule RedisBenches.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
+      RedisBenches.Redix
       # Starts a worker by calling: RedisBenches.Worker.start_link(arg)
       # {RedisBenches.Worker, arg},
     ]
